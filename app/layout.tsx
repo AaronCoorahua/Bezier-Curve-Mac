@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tessellation Shaders | Bézier Surface Visualization",
+  title: "Bézier Surface Visualization",
   description: "Visualización dinámica de superficies Bézier mediante tessellation shaders en tiempo real",
 };
 
