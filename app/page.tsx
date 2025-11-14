@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Sparkles, Layers, Cpu, Github } from "lucide-react";
+import { Sparkles, Layers, Cpu, Github, Linkedin } from "lucide-react";
 
 export default function Home() {
   return (
@@ -279,6 +279,14 @@ export default function Home() {
                 className="p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all"
               >
                 <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aaron-coorahua"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all"
+              >
+                <Linkedin className="w-5 h-5" />
               </a>
             </motion.div>
             <p className="text-sm text-zinc-500">
