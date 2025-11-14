@@ -66,97 +66,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Description Section */}
-        <section className="py-20 px-6">
-          <div className="max-w-6xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500"
-            >
-              El Arte de la Geometría
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {/* Card 1 */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
-                <div className="relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl hover:border-white/20 transition-all">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4">
-                    <Layers className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Tessellation Dinámica</h3>
-                  <p className="text-zinc-400 leading-relaxed">
-                    Subdivisión en tiempo real de la geometría mediante shaders especializados, 
-                    transformando superficies simples en formas complejas y orgánicas con millones de vértices.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Card 2 */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-orange-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
-                <div className="relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl hover:border-white/20 transition-all">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-4">
-                    <Sparkles className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Superficie Bézier</h3>
-                  <p className="text-zinc-400 leading-relaxed">
-                    Curvas paramétricas controladas por puntos que deforman la geometría como una 
-                    tela flexible, creando formas suaves y naturales mediante interpolación matemática.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Main description card */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl" />
-              <div className="relative p-10 md:p-12 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-xl">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                    <Cpu className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">GPU + Matemáticas = Arte Visual</h3>
-                    <p className="text-lg text-zinc-300 leading-relaxed mb-4">
-                      La coloración basada en altura revela la curvatura y el volumen de la superficie, 
-                      creando gradientes que fluyen naturalmente a través de la geometría. Cada píxel 
-                      es calculado en paralelo por la GPU, permitiendo deformaciones complejas en tiempo real.
-                    </p>
-                    <p className="text-lg text-zinc-300 leading-relaxed">
-                      El resultado es una <span className="text-white font-semibold">experiencia visual inmersiva</span> que 
-                      demuestra cómo las matemáticas puras pueden transformarse en formas orgánicas y artísticas, 
-                      difuminando la línea entre código y creatividad.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Gallery Section */}
+        {/* Gallery Section - MOVED UP */}
         <section className="py-20 px-6">
           <motion.div
             initial={{ opacity: 0 }}
@@ -165,9 +75,15 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-7xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500"
+            >
               Galería Visual
-            </h2>
+            </motion.h2>
 
             {/* First image - Large */}
             <motion.div
@@ -218,49 +134,154 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Technical Details */}
+        {/* Description Section - More Dynamic */}
         <section className="py-20 px-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
-              Características Técnicas
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "Tessellation Shaders",
-                  desc: "Subdivisión dinámica de geometría en la GPU para mayor detalle",
-                },
-                {
-                  title: "Superficie Bézier",
-                  desc: "Curvas paramétricas que generan formas suaves y orgánicas",
-                },
-                {
-                  title: "Control Interactivo",
-                  desc: "Puntos de control que deforman la superficie en tiempo real",
-                },
-                {
-                  title: "Coloración Procedural",
-                  desc: "Gradientes basados en altura que revelan la geometría",
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ scale: 1.02 }}
-                  className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all"
-                >
-                  <h3 className="text-lg font-semibold mb-2 text-white">{item.title}</h3>
-                  <p className="text-sm text-zinc-400">{item.desc}</p>
-                </motion.div>
-              ))}
+          <div className="max-w-6xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500"
+            >
+              El Arte de la Geometría
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* Card 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+                whileHover={{ scale: 1.03, rotateY: 5 }}
+                className="relative group cursor-pointer"
+                style={{ perspective: 1000 }}
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl"
+                  animate={{ 
+                    scale: [1, 1.05, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <div className="relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl hover:border-white/20 transition-all">
+                  <motion.div 
+                    className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <Layers className="w-6 h-6 text-white" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Tessellation Dinámica</h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    Subdivisión en tiempo real de la geometría mediante shaders especializados, 
+                    transformando superficies simples en formas complejas y orgánicas con millones de vértices.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Card 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+                whileHover={{ scale: 1.03, rotateY: -5 }}
+                className="relative group cursor-pointer"
+                style={{ perspective: 1000 }}
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-orange-500/20 rounded-3xl blur-xl"
+                  animate={{ 
+                    scale: [1, 1.05, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                />
+                <div className="relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl hover:border-white/20 transition-all">
+                  <motion.div 
+                    className="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center mb-4"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <Sparkles className="w-6 h-6 text-white" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Superficie Bézier</h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    Curvas paramétricas controladas por puntos que deforman la geometría como una 
+                    tela flexible, creando formas suaves y naturales mediante interpolación matemática.
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+
+            {/* Main description card - More dynamic */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
+              whileHover={{ scale: 1.02 }}
+              className="relative cursor-pointer"
+            >
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl"
+                animate={{ 
+                  rotate: [0, 5, 0, -5, 0],
+                }}
+                transition={{ 
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <div className="relative p-10 md:p-12 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-xl">
+                <div className="flex items-start gap-4 mb-6">
+                  <motion.div 
+                    className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0"
+                    animate={{ 
+                      boxShadow: [
+                        "0 0 20px rgba(6, 182, 212, 0.3)",
+                        "0 0 40px rgba(168, 85, 247, 0.5)",
+                        "0 0 20px rgba(6, 182, 212, 0.3)"
+                      ]
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Cpu className="w-5 h-5 text-white" />
+                  </motion.div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-4">GPU + Matemáticas = Arte Visual</h3>
+                    <p className="text-lg text-zinc-300 leading-relaxed mb-4">
+                      La coloración basada en altura revela la curvatura y el volumen de la superficie, 
+                      creando gradientes que fluyen naturalmente a través de la geometría. Cada píxel 
+                      es calculado en paralelo por la GPU, permitiendo deformaciones complejas en tiempo real.
+                    </p>
+                    <p className="text-lg text-zinc-300 leading-relaxed">
+                      El resultado es una <span className="text-white font-semibold">experiencia visual inmersiva</span> que 
+                      demuestra cómo las matemáticas puras pueden transformarse en formas orgánicas y artísticas, 
+                      difuminando la línea entre código y creatividad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </section>
 
         {/* Footer */}
